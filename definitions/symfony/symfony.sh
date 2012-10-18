@@ -29,6 +29,7 @@ http {
     gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
 
     server {
+        server_name $hostname;
         root /vagrant/web;
 
         location / {
