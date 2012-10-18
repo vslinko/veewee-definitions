@@ -72,6 +72,13 @@ pm.max_spare_servers = 16
 pm.max_requests = 1024
 EOF
 
+cat << EOF >> /etc/php5/mods-available/xdebug.ini
+xdebug.default_enable = 1
+xdebug.remote_autostart = 1
+xdebug.remote_connect_back = 1
+xdebug.remote_enable = 1
+EOF
+
 cat << EOF > /etc/postgresql/8.4/main/pg_hba.conf
 local	all	all			trust
 host	all	all	0.0.0.0/0	trust
