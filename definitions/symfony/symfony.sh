@@ -31,6 +31,7 @@ http {
     server {
         server_name \$hostname;
         root /vagrant/web;
+        client_max_body_size 30M;
 
         location / {
             location ~ \.php$ {
